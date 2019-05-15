@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package palavras_embaralhadas;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -15,9 +16,10 @@ public class Palavras_Embaralhadas {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         Scanner in = new Scanner(System.in);
-
+        BancoDePalavras teste = new BancoDePalavras();
+        teste.retornaPalavra();
     }
     
 }
