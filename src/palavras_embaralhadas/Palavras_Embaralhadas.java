@@ -21,6 +21,8 @@ public class Palavras_Embaralhadas {
         BancoDePalavras teste = new BancoDePalavras();
         FabricaEmbaralhadores embaralha = new FabricaEmbaralhadores();
         System.out.println(embaralha.embaralhaDificil(teste.retornaPalavra()));
+        FabricaMecanicaDoJogo game = new FabricaMecanicaDoJogo();
+        game.novoJogo();
     }
     
 }

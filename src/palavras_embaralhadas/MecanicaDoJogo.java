@@ -10,5 +10,9 @@ package palavras_embaralhadas;
  * @author brenu
  */
 public interface MecanicaDoJogo {
+    public abstract boolean testaPalavra(String original, String entrada);
+    public abstract int verificaDificuldade();
+    public abstract void novaPalavra();
+    public abstract void novoJogo();
     
 }
