@@ -10,5 +10,6 @@ package palavras_embaralhadas;
  * @author brenu
  */
 public class FabricaMecanicaDoJogo {
-    
+    //Use um switch + variável random pra escolher de forma aleatória
+                                //o embaralhamento da próxima palavra
 }

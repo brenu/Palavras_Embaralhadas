@@ -7,7 +7,6 @@ package palavras_embaralhadas;
 
 import java.util.Arrays;
 import java.util.*;
-import java.util.ArrayList;
 /**
  *
  * @author brenu
@@ -16,8 +15,17 @@ public class FabricaEmbaralhadores implements Embaralhador{
 
     @Override
     public String embaralhaFacil(String palavra) {
-        
-        return null;
+        char[] trocado = palavra.toCharArray();
+        for(int i=0;i<trocado.length;i++){
+            int aux = i;
+            while(i<trocado.length && trocado[i]!= ' '){
+                i++;
+            }
+            char temp = trocado[aux];
+            trocado[aux] = trocado[i-1];
+            trocado[i-1] = temp;
+        }
+        return new String(trocado);
     }
 
     @Override
