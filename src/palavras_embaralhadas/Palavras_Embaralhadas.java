@@ -16,13 +16,40 @@ public class Palavras_Embaralhadas {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) throws IOException{
+        LimpaTela limpador = new LimpaTela();
         Scanner in = new Scanner(System.in);
+        String resposta;
         BancoDePalavras teste = new BancoDePalavras();
         FabricaEmbaralhadores embaralha = new FabricaEmbaralhadores();
-        System.out.println(embaralha.embaralhaDificil(teste.retornaPalavra()));
         FabricaMecanicaDoJogo game = new FabricaMecanicaDoJogo();
-        game.novoJogo();
+        System.out.println("-----Bem-vindo ao jogo Palavras Embaralhadas!-----");
+        System.out.println("• Lhe serão mostradas palavras com as letras trocadas;");
+        System.out.println("• Você deve inserir o que acredita ser a palavra certa;");
+        System.out.println("• Sempre que der uma resposta, você receberá uma nova palavra;");
+        System.out.println("• Você pode errar até três vezes. Após isso, perdeu;");
+        System.out.println("• No fim do jogo, serão contados os seus acertos.");
+        System.out.println("Deseja iniciar uma nova partida?");
+        resposta = in.next();
+        do{
+            limpador.limparTela();
+        switch(resposta){
+            case "y":
+            game.novoJogo();
+            break;
+            case "Y":
+            game.novoJogo();
+            break;    
+        }
+        System.out.println("Digite y caso queira jogar uma nova partida: ");
+        resposta = in.next();
+        }while(resposta.equals("y") || resposta.equals("Y"));
+                for(int i=0;i<3;i++){
+                    System.out.println("\n");
+                }
+                System.out.println("---------------------------------");
+                System.out.println("----------Encerrando...----------");
     }
     
 }

@@ -31,7 +31,6 @@ public class BancoDePalavras{
     for(i=0;i<=numeroLinha;i++){
         linha = in.readLine();
         if(i==numeroLinha){
-            System.out.println(linha);
             return linha;
         }
     }

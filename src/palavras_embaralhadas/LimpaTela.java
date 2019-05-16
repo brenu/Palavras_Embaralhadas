@@ -4,17 +4,17 @@
  * and open the template in the editor.
  */
 package palavras_embaralhadas;
-
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  *
  * @author brenu
  */
-public interface MecanicaDoJogo {
-    public abstract boolean testaPalavra(String original, String entrada);
-    public abstract int verificaDificuldade();
-    public abstract void novaPalavra();
-    public abstract void novoJogo();
-    
+public class LimpaTela {
+    public void limparTela(){
+        for(int i=0;i<100;i++){
+        System.out.println("\n");
+        }
+    }
 }

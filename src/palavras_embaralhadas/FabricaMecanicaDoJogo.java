@@ -5,6 +5,7 @@
  */
 package palavras_embaralhadas;
 
+import java.io.IOException;
 import java.util.*;
 /**
  *
@@ -57,8 +58,6 @@ public class FabricaMecanicaDoJogo implements MecanicaDoJogo{
         this.acertos = acertos;
     }
     
-    
-    
     @Override
     public boolean testaPalavra(String original, String entrada) {
         if(original.equals(entrada))
@@ -97,6 +96,9 @@ public class FabricaMecanicaDoJogo implements MecanicaDoJogo{
     @Override
     public void novoJogo() {
         Scanner in = new Scanner(System.in);
+        LimpaTela limpador = new LimpaTela();
+        this.setAcertos(0);
+        this.setErros(0);
         do{
         while(this.embaralhado == null){
         this.novaPalavra();
@@ -104,18 +106,16 @@ public class FabricaMecanicaDoJogo implements MecanicaDoJogo{
         System.out.println("A palavra é: " + this.embaralhado);
         System.out.println("Sua resposta é: ");
         String entrada = in.next();
-            System.out.println(entrada.equals(original));
         if(this.testaPalavra(original, entrada)){
             this.setAcertos(this.getAcertos()+1);
         }else{
             this.setErros(this.getErros()+1);
         }
+        limpador.limparTela();
         }}
         this.embaralhado = null;
         }while(this.getErros()<3);
         System.out.println("Fim de jogo :(");
         System.out.println("Você teve "+this.getAcertos()+" acertos");
     }
-    //Use um switch + variável random pra escolher de forma aleatória
-                                //o embaralhamento da próxima palavra
 }
