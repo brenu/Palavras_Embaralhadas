@@ -10,5 +10,8 @@ package palavras_embaralhadas;
  * @author brenu
  */
 public interface Embaralhador {
-    
+
+    public abstract String embaralhaFacil(String palavra);
+    public abstract String embaralhaMedio(String palavra);
+    public abstract String embaralhaDificil(String palavra);
 }

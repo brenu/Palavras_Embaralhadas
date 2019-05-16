@@ -19,7 +19,8 @@ public class Palavras_Embaralhadas {
     public static void main(String[] args) throws IOException{
         Scanner in = new Scanner(System.in);
         BancoDePalavras teste = new BancoDePalavras();
-        teste.retornaPalavra();
+        FabricaEmbaralhadores embaralha = new FabricaEmbaralhadores();
+        System.out.println(embaralha.embaralhaDificil(teste.retornaPalavra()));
     }
     
 }
